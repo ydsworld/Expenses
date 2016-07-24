@@ -4,7 +4,7 @@ import com.ydsworld.model.user.User;
 import lombok.Data;
 
 @Data
-public class ExpenseType {
+public class Vendor {
     String name;
     String description;
     User user;
