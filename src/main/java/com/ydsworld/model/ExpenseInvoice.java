@@ -7,18 +7,14 @@ import java.util.Date;
 
 @Data
 public class ExpenseInvoice {
-
+    int id;
     Date invoicedate;
-    Date dateentered = new Date();
-    Date datepaid;
-    int status;
     byte[] image;
     String imagecontenttype;
     double amount;
     double tax;
     double total;
-    String paymentdescription;
-    String accountnumber;
+    String comment;
     ExpenseType expensetype;
     Vendor vendor;
     PaymentType paymenttype;
