@@ -7,12 +7,12 @@ import java.util.Date;
 
 @Data
 public class User {
-    String firstName;
-    String lastName;
-    String username;
-    String passwordHash;
-    String email;
-    String phonenumber;
-    Date dateCreated;
-    Date lastUpdated;
+    private String firstName;
+    private String lastName;
+    private String username;
+    private String passwordHash;
+    private String email;
+    private String phonenumber;
+    private Date dateCreated;
+    private Date lastUpdated;
 }
