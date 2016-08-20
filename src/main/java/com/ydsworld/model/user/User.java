@@ -15,4 +15,6 @@ public class User {
     private String phonenumber;
     private Date dateCreated;
     private Date lastUpdated;
+    private Role role;
+    private Boolean enabled;
 }

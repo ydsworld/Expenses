@@ -1,0 +1,4 @@
+export RDS_HOST_ADDR=localhost:3306
+export RDS_USERNAME=root
+export RDS_PASSWORD=
+export RDS_DBNAME=expenses
