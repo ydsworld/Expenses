@@ -3,18 +3,25 @@ package com.ydsworld.model.user;
 
 import lombok.Data;
 
-import java.util.Date;
+import javax.persistence.*;
 
 @Data
+@Entity
+@Table(name="users")
 public class User {
-    private String firstName;
-    private String lastName;
+
+    @Id
+    @Column(name="username")
     private String username;
-    private String passwordHash;
-    private String email;
-    private String phonenumber;
-    private Date dateCreated;
-    private Date lastUpdated;
+    private String password;
+ //   private String email;
+//    private String phonenumber;
+//    private Date dateCreated;
+//    private Date lastUpdated;
+//    private String firstName;
+//    private String lastName;
+    @Enumerated(EnumType.STRING)
     private Role role;
+
     private Boolean enabled;
 }

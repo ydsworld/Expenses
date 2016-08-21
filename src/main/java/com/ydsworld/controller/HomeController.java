@@ -19,10 +19,6 @@ public class HomeController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model){
-        User user = new User();
-        user.setFirstName("Arun");
-        user.setLastName("Patel");
-        model.addAttribute("messsage", user);
         return "login";
     }
 
