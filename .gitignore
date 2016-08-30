@@ -85,6 +85,9 @@ fabric.properties
 # *.ipr
 
 .gitignore
-/target/
-/.idea/
-expenses.iml
+target
+.idea
+*.iml
+*.ipr
+*.log
+
