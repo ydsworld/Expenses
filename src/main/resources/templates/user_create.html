@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Security Example </title>
+
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <form th:action="@{/user/create}" method="post">
+        <fieldset>
+        <h2>Sign up</h2>
+
+        <input type="text" name="username"  class="form-control"  placeholder="Username" />
+        <input type="password" name="password" class="form-control" placeholder="Password"/>
+        <input type="password" name="passwordRepeated" class="form-control" placeholder="Confirm Password"/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign up</button>
+        <!--<input type="submit" value="Sign In"/>-->
+
+        </fieldset>
+    </form>
+</div>
+    <div class="col-md-4"></div>
+
+</div> <!-- /container -->
+
+
+
+</body>
+</html>
