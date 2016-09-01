@@ -26,13 +26,13 @@ public class UserCreateFormValidator implements Validator{
         validatePasswords(errors, form);
     }
 
-    private void validatePasswords(Errors errors, UserCreateForm form) {
+    protected void validatePasswords(Errors errors, UserCreateForm form) {
         if(!form.getPassword().equals(form.getPasswordRepeated())){
             errors.rejectValue("passwordRepeated","passwordRepeated.no_match", "Passwords do not match");
         }
     }
 
-    private void validateUsername(Errors errors, UserCreateForm form) {
+    protected void validateUsername(Errors errors, UserCreateForm form) {
         User user = userService.getUserByUsername(form.getUsername());
         if(user != null){
             errors.rejectValue("username", "username.exists", "User with this username already exists");
