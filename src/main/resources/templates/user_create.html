@@ -18,13 +18,21 @@
 <div class="container">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-    <form th:action="@{/user/create}" method="post">
+    <form th:action="@{/user/create}" th:object="${form}" method="post">
         <fieldset>
         <h2>Sign up</h2>
 
-        <input type="text" name="username"  class="form-control"  placeholder="Username" />
+
+            <div class="form-group">
+                <label class="control-label" for="inputError"></label>
+                <input type="text" name="username" class="form-control"  placeholder="Username" id="inputError"/>
+                <span class="help-block" th:if="${#fields.hasErrors('username')}" th:errors="*{username}" >Please correct the error</span>
+            </div>
+
         <input type="password" name="password" class="form-control" placeholder="Password"/>
+            <p class="help-inline" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
         <input type="password" name="passwordRepeated" class="form-control" placeholder="Confirm Password"/>
+            <p class="help-inline" th:if="${#fields.hasErrors('passwordRepeated')}" th:errors="*{passwordRepeated}"></p>
         <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign up</button>
         <!--<input type="submit" value="Sign In"/>-->
 

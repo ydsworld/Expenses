@@ -10,13 +10,13 @@ import javax.validation.constraints.NotNull;
 @Data
 public class UserCreateForm {
 
-    @NotEmpty
+    @NotEmpty(message = "Username can't be empty")
     private String username = "";
 
-    @NotEmpty
+    @NotEmpty(message = "Password can't be empty")
     private String password = "";
 
-    @NotEmpty
+    @NotEmpty(message = "Password can't be empty")
     private String passwordRepeated = "";
 
     @NotNull
